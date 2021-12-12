@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Swap
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 100;
+            int num2 = 500;
+            Console.WriteLine("num1: " + num1);
+            Console.WriteLine("num2: " + num2);
+            Swap<int>(ref num1, ref num2);
+            Console.WriteLine("num1: " +num1);
+            Console.WriteLine("num2: " + num2);
+            string STR1 = "Raiden";
+            string STR2 = "Yae";
+            //STR1 = STR1.ToUpper(); //work!!
+            Console.WriteLine("String 1: " +STR1);
+            Console.WriteLine("String 2: " + STR2);
+            Swap<string>(ref STR1, ref STR2);
+            Console.WriteLine("String 1: " + STR1);
+            Console.WriteLine("String 2: " + STR2);
+
+        }
+        static void Swap<T>(ref T val01, ref T val02)
+        {
+            T temp;
+            temp = val01;
+            val01 = val02;
+            val02 = temp;
+        }
+    }
+}
+
