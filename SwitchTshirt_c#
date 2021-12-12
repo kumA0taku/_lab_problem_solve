@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SwitchTshirt
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("T-Shirt size: S = Small, M = Medium, L = Large, XL = Extralarge");
+            Console.WriteLine("Please enter size: ");
+            string store_size_data = Console.ReadLine();
+            store_size_data = store_size_data.ToUpper();
+            switch (store_size_data)
+            {
+                case "S":
+                    Console.WriteLine("Size: {0}, You choose small size.", store_size_data);
+                    break;
+                case "M":
+                    Console.WriteLine("Size: {0}, You choose medium size.", store_size_data);
+                    break;
+                case "L":
+                    Console.WriteLine("Size: {0}, You choose large size.", store_size_data);
+                    break;
+                case "XL":
+                    Console.WriteLine("Size: {0}, You choose extre size.", store_size_data);
+                    break;
+                default:
+                    Console.WriteLine("\nInvalid size. \nPlease choose size: s, m, l, xl.");
+                    break;
+            }
+        }
+    }
+}
+
