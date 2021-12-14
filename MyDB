@@ -9,8 +9,8 @@ namespace MyDatabase
         static void Main(string[] args)
         {
             MyDB.showCustomer();
-
-            MyDB.changeCustomer();
+            MyDB.changeCustomerID();
+            MyDB.changeCustomerName();
             MyDB.showCustomer();
 
         }
@@ -28,11 +28,17 @@ namespace MyDatabase
             Console.WriteLine("Customer address is {0}", Address);
 
         }
-        public static void changeCustomer()
+        public static void changeCustomerID()
         {
             Console.Write("Please Enter new Customer ID: ");
             customerID = int.Parse(Console.ReadLine());
-        }
 
+        }
+        public static void changeCustomerName()
+        {
+            Console.Write("Please Enter new Customer Name: ");
+            strName = Console.ReadLine();
+
+        }
     }
 }
