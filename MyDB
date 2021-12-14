@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MyDatabase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyDB.showCustomer();
+
+            MyDB.changeCustomer();
+            MyDB.showCustomer();
+
+        }
+    }
+    class MyDB
+    {
+        static int customerID = 100;
+        static string strName = "Mr. Chaiyo";
+        static string Address = "555, 55Rd";
+
+        public static void showCustomer()
+        {
+            Console.WriteLine("Customer ID is {0}", customerID);
+            Console.WriteLine("Customer name is {0}", strName);
+            Console.WriteLine("Customer address is {0}", Address);
+
+        }
+        public static void changeCustomer()
+        {
+            Console.Write("Please Enter new Customer ID: ");
+            customerID = int.Parse(Console.ReadLine());
+        }
+
+    }
+}
