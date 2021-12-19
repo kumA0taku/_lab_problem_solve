@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace sum_point_std
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("                     Student Point");
+            Console.WriteLine("        class  midterm  final  collect\n");
+            int[][] intArr = new int[5][];
+            intArr[0] = new int[4] { 10, 30, 40, 20 };
+            intArr[1] = new int[4] { 10, 30, 40, 20 };
+            intArr[2] = new int[4] { 10, 30, 40, 20 };
+            intArr[3] = new int[4] { 10, 30, 40, 20 };
+            intArr[4] = new int[4] { 10, 30, 40, 20 };
+            double _sum;
+            for (int i = 0; i < 5; ++i)
+            {
+                _sum = 0;
+                for (int j = 0; j < 4; ++j)
+                {
+                    _sum += intArr[i][j];
+                    Console.Write("\t {0}", intArr[i][j]);
+                }
+                Console.Write("\n\t The sum of point is: {0}\n", _sum);
+                Console.WriteLine();
+            }
+        }
+    }
+}
