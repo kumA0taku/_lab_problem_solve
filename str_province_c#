@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace str_province 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] strProvince = { "Nakornpatom", "Bangkok", "Chainart", "Chiangmai", "Lur", "Krabi" };
+            for (int i = 0; i < 3; ++i)
+            {
+                Console.WriteLine("\t {0}", strProvince[i]);
+            }
+            Console.WriteLine("\n");
+        }
+    }
+}
