@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace e_data  
+{
+    class Program
+    {
+        static void Main(string[] args)
+        //e. data5 = {“abc”, “def”, “ghi”}  
+        {
+            string[] e_data05 = new string[] { "abc", "def", "ghi" };
+            for (int i = 0; i < 3; ++i)
+            {
+                Console.WriteLine("\t {0}", e_data05[i]);
+            }
+            Console.WriteLine("\n");
+        }
+    }
+}
