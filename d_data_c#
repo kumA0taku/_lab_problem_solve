@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace d_data 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        //d. data4 = { {{1.5, 2.2}, {3.3, 4.4}}, {{5.5, 6.6}, {7.7, 8.9}} } 
+        {
+            double[ , , ] d_data04 = new double[2,2,2] { { { 1.5, 2.2 }, { 3.3, 4.4 } }, 
+                { { 5.5, 6.6 }, { 7.7, 8.9 } } };
+            for (int i = 0; i < 2; ++i)
+            {
+                for (int j = 0; j < 2; ++j)
+                {
+                    for(int k=0; k<2; ++k)
+                    {
+                        Console.WriteLine("\t {0}", d_data04[i, j, k]);
+                    }
+                }
+                Console.WriteLine("\n");
+            }
+        }
+    }
+}
