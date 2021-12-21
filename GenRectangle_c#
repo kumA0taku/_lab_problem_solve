@@ -14,12 +14,11 @@ namespace GenRectangle
             int _length = int.Parse(Console.ReadLine());
 
             Console.WriteLine("\n----Rectangular picture----");
+            _draw_rec(_width, _length); //sent-receive data
+            Console.WriteLine("----Rectangular area----");
 
-            _draw_rec(_width, _length);
-            Console.WriteLine("\n----Rectangular area----");
-
-            int _area = _find_area(_width, _length);
-            Console.WriteLine("Rectangular area is: {0}", _area);
+            int _area = _find_area(_width, _length); //sent-receive data
+            Console.WriteLine("\nRectangular area is: {0}", _area);
             Console.ReadLine();
         }
         public static void _draw_rec(int w, int l)
