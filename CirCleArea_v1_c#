@@ -34,7 +34,7 @@ namespace CirCleArea
             float _radius, _area;
             _radius = float.Parse(txtRadius.Text);
             _area = PI * _radius * _radius;
-            MessageBox.Show("พื้นที่เท่ากับ : " + _area, "ผลการคำนวณ");
+            MessageBox.Show("พื้นที่เท่ากับ : " + _area + "\nเล้นรอบรูป : "+ 2* PI * _radius, "ผลการคำนวณ");
         }
     }
 }
