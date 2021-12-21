@@ -14,6 +14,7 @@ namespace GenRectangle
             int _length = int.Parse(Console.ReadLine());
 
             Console.WriteLine("\n----Rectangular picture----");
+
             _draw_rec(_width, _length);
             Console.WriteLine("\n----Rectangular area----");
 
