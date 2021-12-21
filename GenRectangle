@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;   
+using System.Text;
+
+namespace GenRectangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input width \t: ");
+            int _width = int.Parse(Console.ReadLine());
+            Console.Write("Input length \t: ");
+            int _length = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\n----Rectangular picture----");
+            _draw_rec(_width, _length);
+            Console.WriteLine("\n----Rectangular area----");
+            int _area = _find_area(_width, _length);
+            Console.WriteLine("Rectangular area is: {0}", _area);
+        }
+        public static void _draw_rec(int w, int l)
+        {
+            for(int i = 0; i<w; ++i)
+            {
+                for(int j = 0; j<1; ++j)
+                {
+                    Console.Write("x");
+                }
+                Console.WriteLine();
+            }
+        }
+        public static int _find_area(int w, int l)
+        {
+            return w*l;
+        }
+    }
+}
