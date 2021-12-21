@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TwoNumCompare
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float _number01;
+            float _number02;
+            _number01 = float.Parse(_num1.Text);
+            _number02 = float.Parse(_num2.Text);
+
+            if(_number01> _number02)
+            {
+                MessageBox.Show("No.1");
+            }
+            else if(_number01 < _number02)
+            {
+                MessageBox.Show("No.2");
+            }
+            else 
+            {
+                MessageBox.Show("ค่าตัวเลขทั้งสองตัวเท่ากัน ซึ่งเท่ากับ "+ _number01);
+            }
+        }
+
+        private void _num2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _num1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
