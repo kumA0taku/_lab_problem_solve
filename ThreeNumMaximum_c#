@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ThreeNumMaximum
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdCalculate_Click(object sender, EventArgs e)
+        {
+            float _number1;
+            float _number2;
+            float _number3;
+            _number1 = float.Parse(_num1.Text);
+            _number2 = float.Parse(_num2.Text);
+            _number3 = float.Parse(_num3.Text);
+
+            if (_number1 > _number2)
+            { if(_number1 > _number3)
+                {
+                    MessageBox.Show("ค่ามากที่สุดคือตัวเลขที่ 1  ซึ่งเท่ากับ " + _number1);
+                }
+                else
+                {
+                    MessageBox.Show("ค่ามากที่สุดคือตัวเลขที่ 3  ซึ่งเท่ากับ " + _number3);
+                }
+            }
+            else if (_number2 > _number3)
+            {
+                MessageBox.Show("ค่ามากที่สุดคือตัวเลขที่ 2  ซึ่งเท่ากับ " + _number2);
+            }
+            else
+            {
+                MessageBox.Show("ค่ามากที่สุดคือตัวเลขที่ 3  ซึ่งเท่ากับ " + _number3);
+            }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
