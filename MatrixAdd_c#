@@ -47,6 +47,8 @@ namespace MatrixAdd
             listBox1.Items.Clear();
             listBox2.Items.Clear();
             listBox3.Items.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
