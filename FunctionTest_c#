@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace FunctionTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ShowData(101, "Miss Thailand", "5 Thai Rd.");
+        }
+        static void ShowData(int id, string name, string address)
+        {
+            Console.WriteLine("Customer ID is {0}", id);
+            Console.WriteLine("Customer name is {0}", name);
+            Console.WriteLine("Customer address is {0}", address);
+            Console.WriteLine();
+        }
+    }
+}
