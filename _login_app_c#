@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _login_app
+{
+    public partial class Form1 : Form
+    {
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string _user = "Raiden";
+            string _pass = "YaeMiko";
+            if (textBox1.Text.Trim().CompareTo(_user) == 0 || textBox2.Text.Trim().CompareTo(_pass) == 0)
+                MessageBox.Show("wellcome", "Login Screen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show("username or password error", "Login Screen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+    }
+}
