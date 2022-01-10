@@ -20,15 +20,15 @@ namespace ClassTest
                 Console.WriteLine("3. Deposit \n");
                 Console.WriteLine("4. Cancel \n");
                 Console.WriteLine("***************\n\n");
-                Console.WriteLine("ENTER YOUR CHOICE : ");
+                Console.WriteLine("ENTER YOUR CHOICE: ");
                 choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("\n YOUR CURRENT BALANCE IS : {0} ", amount);
+                        Console.WriteLine("\n YOUR CURRENT BALANCE IS: {0} ", amount);
                         break;
                     case 2:
-                        Console.WriteLine("\n ENTER THE WITHDRAW AMOUNT : ");
+                        Console.WriteLine("\n ENTER THE WITHDRAW AMOUNT: ");
                         withdraw = int.Parse(Console.ReadLine());
                         if (withdraw % 100 != 0)
                         {
@@ -42,7 +42,7 @@ namespace ClassTest
                         {
                             amount = amount - withdraw;
                             Console.WriteLine("\n\n PLEASE COLLECT YOUR CASH");
-                            Console.WriteLine("\n CURRENT BALANCE IS Rs : {0}", amount);
+                            Console.WriteLine("\n CURRENT BALANCE IS: {0}", amount);
                         }
                         break;
                     case 3:
@@ -50,7 +50,7 @@ namespace ClassTest
                         deposit = int.Parse(Console.ReadLine());
                         amount = amount + deposit;
                         Console.WriteLine("YOUR AMOUNT HAS BEEN DEPOSITED SUCCESSFULLY..");
-                        Console.WriteLine("YOUR TOTAL BALANCE IS Rs : {0}", amount);
+                        Console.WriteLine("YOUR TOTAL BALANCE IS: {0}", amount);
                         break;
                     case 4:
                         Console.WriteLine("\n THANK YOU…");
