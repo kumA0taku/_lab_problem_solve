@@ -8,6 +8,7 @@ namespace ArrayQueueTest
     {
         protected object[] data;
         protected int end, start;
+
         public ArrayQueue(int capacity)
         {
             data = new object[capacity + 1];
@@ -15,24 +16,23 @@ namespace ArrayQueueTest
         }
         public bool isEmpty()
         {
-            return end == start ;
+            return end == start;
         }
-        public void enqueue(object ob)
+        public void enqueue(object o)
         {
             int n = (end + 1) % data.Length;
-            if(n!= start)
-            {
-                data[end = n] = ob;
-            }
+            if (n != start)
+                data[end = n] = o;
         }
         public object dequeue()
         {
             if (isEmpty())
                 return null;
             start = (start + 1) % data.Length;
-            object ob = data[start];
+            object o = data[start];
             data[start] = null;
-            return ob;
+            return o;
         }
+
     }
 }
