@@ -8,6 +8,7 @@ namespace ArrayStackTest
     {
         protected object[] data;
         protected int pointer;
+
         public ArrayStack(int capacity)
         {
             data = new object[capacity];
@@ -26,9 +27,10 @@ namespace ArrayStackTest
         {
             if (isEmpty())
                 return null;
-            object ob = data[--pointer];
+            object oo = data[--pointer];
             data[pointer] = null;
-            return ob;
+            return oo;
         }
     }
 }
+
