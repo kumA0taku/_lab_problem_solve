@@ -1,25 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Collections;
 
-namespace ArrayStackTest
+
+namespace salt_gacha
 {
-    public class ArrayStackTest
+    internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            ArrayStack stack = new ArrayStack(10);
+            while(true)
+            {
 
-            for(int i = 0; i < 10; i++)
-            {
-                string objToPush = "obj"+ i;
-                Console.WriteLine("pushing: {0}",objToPush);
-                stack.push(objToPush);
-            }
-            while(!stack.isEmpty())
-            {
-                string objPoped = (string)stack.pop();
-                Console.WriteLine("poping: {0}", objPoped);
+                Console.Write("Please input number : ");
+                string num_ber = Console.ReadLine();
+                Hashtable employees = new Hashtable();
+
+                employees.Add("123", "Venti");
+                employees.Add("438", "Sayu");
+                employees.Add("469", "Eula");
+                employees.Add("583", "Yae Miko");
+                employees.Add("623", "Ei");
+                employees.Add("786", "Kaedehara Kazuha");
+                employees.Add("862", "Fischl");
+                employees.Add("873", "Ganyu");
+                employees.Add("945", "Jean");
+
+                if (employees.ContainsKey(num_ber))
+                {
+                    string empName = (string)employees[num_ber];
+                    Console.WriteLine("You got " + "{0}!! \n", empName);
+                }
+                else
+                    Console.WriteLine("Bad luck, You got Qiqi again.. \n");
             }
         }
     }
