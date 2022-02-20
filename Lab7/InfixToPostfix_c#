@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Collections;
+
+namespace InfixToPostfix
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+
+                Console.Write("Please input infix-math expression : ");
+                string data = Console.ReadLine();
+                string result = infixToPostfix(data);
+                Console.WriteLine("Result postfix-math expression : {0}", result);
+
+            }
+
+        }
+
+        static string infixToPostfix(string data)
+        {
+            Stack S = new Stack();
+            string result = "";
+
+            for(int i = 0; i < data.Length; ++i)
+            {
+                if (data[i] == '(')
+                {
+                    S.Push((char)data[i]);
+                }
+                else if (data[i] == ')')
+                {
+                    char temp = (char)S.Pop();
+                    while (temp != '(')
+                    {
+                        if (temp != '(')
+                            result += temp;
+                        if (S.Count != 0)
+                            temp = (char)S.Pop();
+                        else
+                            break;
+                    }
+                }
+                else if ((data[i] == '+') || (data[i] == '-') || (data[i] == '*') || (data[i] == '/') || (data[i] == '^'))
+                {
+                    int priorityNew = getPriority(data[i]); 
+                    int priorityStack = -1;
+                    if (S.Count != 0)
+                    {
+                        priorityStack = getPriority((char)S.Peek());
+                        while (priorityNew <= priorityStack)
+                        {
+                            char temp = (char)S.Pop();
+                            result += temp; 
+                            if (S.Count != 0)
+                                priorityStack = getPriority((char)S.Peek());
+                            else
+                                break;
+                        }
+                    }
+                    S.Push(data[i]);
+                }
+                else
+                {
+                    result += data[i];
+                }
+            }
+            while (S.Count != 0)
+            {
+                char temp = (char)S.Pop();
+                result += temp;
+            }
+            return result;
+        }
+
+        static int getPriority(char sign)
+        {
+            switch (sign)
+            {
+                case '(': return 0;
+                case ')': return 0;
+                case '+': return 1;
+                case '-': return 1;
+                case '*': return 2;
+                case '/': return 2;
+                case '^': return 3;
+            }
+            return -1;
+        }
+    }
+}
+
